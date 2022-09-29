@@ -1,0 +1,1 @@
+La web debe correrse desde un servidor, preferenemente live server, directamente en el archivo root.html

@@ -1,0 +1,142 @@
+
+    <div class="contenedor-heroes">
+        <div class="titular">
+            <h1>ELIJE TU HEROE</h1>
+            <p>Desde los magos mas sabios hasta bestias feroces y ganforros astutos</p>
+        </div>
+        <div class="cont-atributos">
+            <div class="atributos">
+                <h2 class="rojo">FUERZA</h2>
+                <h2 class="verde">AGILIDAD</h2>
+                <h2 class="celeste">INTELIGENCIA</h2>
+            </div>
+        </div>
+        <div class="heroes">        
+                <div class="str" ><img src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/heroes/abaddon.png"  alt=""></div>
+                <div class="str" ><img src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/heroes/alchemist.png"  alt=""></div>
+                <div class="int"><img src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/heroes/arc_warden.png"  alt=""></div>
+                <div class="agi"><img src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/heroes/ursa.png"  alt=""></div>
+                <div class="int"><img src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/heroes/bane.png"  alt=""></div>
+                <div class="str"><img src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/heroes/bristleback.png"  alt=""></div>
+                <div class="int"><img src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/heroes/dark_seer.png"  alt=""></div>
+                <div class="agi"><img src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/heroes/juggernaut.png"  alt=""></div>
+                <div class="int"><img src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/heroes/dazzle.png"  alt=""></div>
+                <div class="str"><img src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/heroes/lycan.png"  alt=""></div>
+                <div class="str"><img src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/heroes/sven.png"  alt=""></div>
+                <div class="int"><img src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/heroes/lina.png"  alt=""></div>
+                <div class="agi"><img src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/heroes/broodmother.png"  alt=""></div>
+                <div class="int"><img src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/heroes/crystal_maiden.png"  alt=""></div>
+                <div class="int"><img src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/heroes/silencer.png"  alt=""></div>
+                <div class="int"><img src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/heroes/obsidian_destroyer.png"  alt=""></div>
+        </div>
+    </div>
+        <span class="titulo"><h1>TABLA DE CARACTERISTICAS</h1></span>
+
+
+    <div class="input-group w-25 filter">
+        <input type="text" class="form-control" placeholder="Type a hero">
+        <button type="button">
+            <span class="input-group-text">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-filter-circle" viewBox="0 0 16 16">
+                    <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"></path>
+                    <path d="M7 11.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 0 1h-1a.5.5 0 0 1-.5-.5zm-2-3a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5zm-2-3a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5z"></path>
+                </svg>
+            </span>
+        </button>
+    </div>
+      
+        <div id="padding-scrollbar">
+            <div class="contenedor-tabla" >
+                <table>
+                    <thead>
+                        <tr>
+                            <th>HEROE</th>
+                            <th>WINRATE</th>
+                            <th>ITEM MAS USADO</th>
+                            <th>RADIO KDA</th>
+                            <th>POPULARIDAD</th>
+                            <th>MEJOR CONTRA</th>
+                            <th>&nbsp;&nbsp;</th>
+                        </tr>
+                    </thead>
+
+                </table>
+            </div>
+        </div>
+
+    <div class="heros-form">
+        <h1>¿Eres un experto conocedor de nuestra comunidad?</h1>
+        <div class="heros-section">
+            <section id="add-heros">
+                <p>Si crees que nos hacen faltan heroes, agrega cuantos quieras!</p>
+                <form action="">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="heroe">
+                        <input type="text" name="" class="form-control" placeholder="winrate">
+                        <input type="text" name="" class="form-control" placeholder="item mas usado">
+                        <input type="text" name="" class="form-control" placeholder="radio KDA">
+                        <input type="text" name="" class="form-control" placeholder="popularidad">
+                        <input type="text" name="" class="form-control" placeholder="mejor contra">
+                        <input type="number" name="cantidad" class="form-control" placeholder="cantidad (opcional)">
+                    </div>
+                    <div class="h-btns">
+                        <button class="add-hero btn btn-dark" type="button">Agregar</button>
+                        <button id="vaciar" type="button" class="btn btn-dark">Vaciar</button>
+                    </div>
+                </form>
+            </section>
+    
+            <section  id="edit-heros">
+                <p>Tambien puedes editar heroes individualmente</p>
+                <form action="">
+                    <div class="form-group adjust-form-group">
+                        <input type="text" class="form-control" placeholder="heroe (a editar)">
+                        <input type="text" name="" class="form-control" placeholder="winrate">
+                        <input type="text" name="" class="form-control" placeholder="item mas usado">
+                        <input type="text" name="" class="form-control" placeholder="radio KDA">
+                        <input type="text" name="" class="form-control" placeholder="popularidad">
+                        <input type="text" name="" class="form-control" placeholder="mejor contra">
+                    </div>
+                    <div class="h-btn">
+                        <button class="edit-hero btn btn-dark" type="button">Editar</button>
+                    </div>
+                </form>
+            </section>
+        </div>
+
+    </div>
+    
+</div>
+    <div class="registro" hidden>
+        <div class="reg-cont">
+            <h2>¡REGISTRATE Y EMPIEZA UNA NUEVA AVENTURA!</h2>
+            <div class="form-reg">
+                <form>
+                    <input type="text" class="form-control" placeholder="Usuario">
+                    <input type="password" name="" class="form-control" placeholder="contraseña">
+                    <input type="email" name="" class="form-control" placeholder="example@gmail.com">     
+                </form>
+            </div>
+            <div class="captcha-contenedor">
+                <p id="captcha-value"></p>
+                <input type="text" id="captcha-input" placeholder="Codigo">
+                <button class="btn btn-dark" type="button" id="confirmar">Confirmar</button>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+      <!--  <button type="button" class="btn btn-secondary" data-toggle="tooltip" data-placement="top" title="Tooltip on top">
+            Tooltip on top
+          </button> -->
+        <div id="social_media_logo">
+            <p> &#x64 &#x7c &#xd5</p>
+        </div>
+        <div id="copyright">
+            <p>Copyright 2020 - 2021 Dota 2 | All Rights Reserved</h3>
+        </div>
+    </footer>
+
+      
+
+

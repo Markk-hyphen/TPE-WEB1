@@ -1,0 +1,948 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/********************************** INICIO ESTRUCTURA *******************************************/ 
+
+body{
+    background-image: url(https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/backgrounds/greyfade.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-sizing: border-box;
+    color: azure;
+}
+
+@font-face {
+    font-family: "messiri_font";
+    src: url("../fonts/messiri_font/ElMessiri-Medium.ttf");
+}
+
+@font-face{
+    font-family: "social_font";
+    src: url("../fonts/logo_font/social_logos.woff");
+}
+
+/********** REGISTRATE CSS **********/
+
+h2{
+    display: flex;
+    justify-content: center;
+    margin-block-start: 5%;
+    margin-block-start: 6%;
+    font-size: 200%;
+}
+
+#captcha-value{
+    margin-bottom: 0 ;
+}
+
+.registro-on{
+    background-image: url(../img/escudo.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 15%;
+    left: 20%;
+    height: 80vh;
+    width: 60%;
+    z-index: 1;
+    box-shadow: 1px 2px 15px rgb(92, 86, 86),
+    0px 10px 20px rgb(105, 101, 101),
+    5px -2px 20px rgb(105, 101, 101),
+    5px -1px 0px rgb(105, 101, 101);
+}
+
+.form-reg{
+    width: 35%;
+}
+
+.reg-cont{
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    height: 100%;
+    justify-content: space-around;
+}
+
+
+.registro h2{
+    font-family: fantasy;
+    letter-spacing: 0.15rem;
+    color: azure;
+    text-align: center;
+    text-shadow: 0px 1px 0px #d68686,
+    0px 10px 10px rgba(102, 45, 45, 0.15),
+    0px 8px 5px rgba(214, 116, 113, 0.15),
+    2px 10px 8px rgba(230, 56, 56, 0.1);
+}
+
+form{
+    color: rgb(255, 255, 255);
+    text-shadow: 0px 1px 0px #d68686,
+    0px 10px 10px rgba(102, 45, 45, 0.15),
+    0px 8px 5px rgba(214, 116, 113, 0.15),
+    2px 10px 8px rgba(230, 56, 56, 0.1);
+    font-family: fantasy;
+}
+
+form input{
+    margin: 1em 0 1em 0;
+}
+.captcha-contenedor input, .captcha-contenedor p, .captcha-contenedor button{
+    width: 20%;
+    padding: 0.2rem;
+    border: 0 rgb(163, 44, 44);
+    border-radius: 2rem;
+}
+
+.captcha-contenedor p{
+    background-color: whitesmoke;
+    text-align: center;
+    color: rgb(124, 8, 47);
+    letter-spacing: 0.2rem;
+}
+
+form div{
+    margin-bottom: 2rem;
+}
+
+.captcha-contenedor{
+    display: flex;
+    justify-content: space-evenly;
+    height: 5%;
+    width: 100%;
+}
+
+.form-contenedor{
+    display: flex;
+    justify-content: center;
+    align-items: space-around;
+    height: 30%;
+    width: 90%;
+    padding: 0% 0 5% 0;
+}
+
+form label{
+    margin-top: 3rem;
+}
+
+.captcha-incorrecto-der{
+    transform: translateX(2rem);
+    transition: all ease 0.7s;
+    background-color: rgb(165, 40, 40);
+    color: whitesmoke;
+}
+
+.captcha-incorrecto-izq{
+    transform: translateX(-1rem);
+    transition: all 0.7s ease;
+    background-color: rgb(165, 40, 40);
+    color: whitesmoke;
+}
+
+.oculto{
+    display: none;
+    transition: all ease 4s;
+}
+
+.removido{  
+    animation: borrar-reg 1.5s;
+}
+
+.navbar-nav a{
+    border-bottom: 3px solid #e47d6e;
+}
+
+@keyframes borrar-reg{
+    
+    30%{
+        transform: translateY(-3rem);
+    }
+    
+    100%{
+        transform: translateY(110rem); 
+    }    
+}
+
+p{
+    text-align: center;}
+
+/********** FIN REGISTRATE CSS **********/
+
+#social_media_logo{
+    padding: 1%;
+    font-family: "social_font";
+    color: rgba(112, 3, 3, 0.5);
+}
+
+footer{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding: 1%;
+    height: 10%;
+    background: linear-gradient(to top, rgba(70, 0, 0, 0.5), rgba(0, 0, 0, 0.0));
+    bottom: 0;
+    align-items: center;
+    
+}
+
+/********************************** FIN ESTRUCTURA / INICIO DE INDEX *******************************************/ 
+
+#contenedor_bienvenida{
+    background-image: url(../img/bienvenida.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    padding-bottom: 27%;
+    width: 90%;
+    display: flex;
+    justify-content: center;
+}
+
+#contenedor_bienvenida p{
+    margin-top: 2%;
+    font-size: 2em;
+    letter-spacing: 0.1rem;
+    font-weight: 600;
+    background: linear-gradient(to right, rgba(0,0,0,0.7), rgba(0,0,0,0.2));
+    border-radius: 3px;
+    padding: 1%;
+}
+
+.contenedor-info-dota{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 5%;
+    text-align: center;
+    margin-top: 5em;
+}
+
+
+.info-dota{
+    width: 90%;
+    margin-bottom: 5%;
+}
+
+.info-dota > div{
+    font-size: 2em;
+    font-weight: 600;
+    font-family: "messiri_font" ;
+}
+
+.info-dota p{
+    font-size: 1.2em;
+    font-family: "messiri_font";
+}
+
+/*********************************** FIN DE INDEX / INICIO DE HEROES ************************************/
+.contenedor-tabla{
+    height: 80%;
+    max-height: 88vh;
+    overflow-Y: auto;
+    box-shadow: 0 -2rem 4rem #00000050;
+    background: linear-gradient(to bottom, rgba(112, 3, 3, 0.5), rgba(0,0,0,0.3));
+    display: flex;
+    justify-content: center;
+    border-top-left-radius: 1.2rem;
+    border-top-right-radius: 1.2rem;
+}
+
+.contenedor-tabla table{
+    width: 100%;
+    height: 70vh;
+}
+
+
+thead th:nth-child(1){
+    width: 15.5%;
+}
+  
+thead th:nth-child(2){
+    width: 15.5%;
+}
+  
+thead th:nth-child(3){
+    width: 15.5%;
+}
+  
+thead th:nth-child(4){
+    width: 15.5%;
+}
+  
+thead th:nth-child(5){
+    width: 15.5%;
+}
+
+thead th:nth-child(6){
+    width: 15.5%;
+}
+
+
+.tr_background{
+    background: linear-gradient(to right, rgba(14, 11, 11, 0.7), rgba(0,0,0,0.2));
+}
+
+thead th, h2, a{
+    font-size: 1.5rem;
+    font-family: "Radiance", "Noto Sans", sans-serif;
+    letter-spacing: 1px;
+
+}
+
+th, td{
+    padding: 1.5rem;
+    font-size: 1.3rem;
+    font-variant: small-caps;
+    letter-spacing: 0.5px; /*EVALUAR*/
+} 
+
+::-webkit-scrollbar{
+  width: 0.4rem;
+}
+
+
+::-webkit-scrollbar-track{
+  background: #f1f1f1; 
+  margin: 0.1rem 0 0.1rem 0.7rem;
+}
+ 
+
+::-webkit-scrollbar-thumb{
+  background: rgb(95, 95, 95); 
+  width: 0.6rem;
+  border-radius: 1rem;
+}
+
+
+::-webkit-scrollbar-thumb:hover{
+  background: rgb(131, 34, 34); 
+}
+
+#padding-scrollbar{
+    padding: 1rem;
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    
+}
+
+.atributos h2{
+    margin: 1rem;
+}
+
+.rojo{
+    color: rgb(223, 0, 0);
+}
+
+.verde{
+    color:rgb(0, 223, 0)
+}
+
+.celeste{
+    color: rgb(0, 134, 223);
+}
+
+.cont-atributos{
+    margin-top: 4rem;
+    height: fit-content;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.atributos{
+    display: flex;
+    width: fit-content;
+    justify-content: space-around;
+    box-shadow: 0 1rem 4rem #00000050;
+    background: linear-gradient(to bottom, rgba(95, 13, 13, 0.3), rgba(0,0,0,0.5));
+    border: 1px #00000050;
+    border-radius: 10rem;
+    padding: 0.4em;
+}
+
+
+.titular{
+    margin-top: 4.5rem;
+    font-size: 2rem;
+}
+
+
+
+h1{
+    font-size: 3rem;
+    font-family: fantasy;
+    text-align: center;
+}
+
+
+button{
+    border: none;
+    background: none;
+}
+
+.heroes{
+    display: flex;
+    flex-flow: wrap;
+    height: 80%;
+    padding: 0.2rem;
+    width: 75%;
+    justify-content: center;
+}
+
+.heroes .int:hover{
+    box-shadow: 0.35rem -0.35rem 0.45rem rgba(2, 105, 190, 0.5),
+                0.35rem -0.35rem 0.45rem rgba(2, 105, 190, 0.5);
+    transition: all 0.3s ease-in;
+    transform: scale(1.1);}
+
+.heroes .str:hover{
+    box-shadow: 0.35rem -0.35rem 0.45rem rgba(112, 3, 3, 0.5),
+                0.35rem -0.35rem 0.45rem rgba(112, 3, 3, 0.5);
+    transition: all 0.3s ease-in;
+    transform: scale(1.15);}
+
+.heroes .agi:hover{
+    box-shadow: 0.35rem -0.35rem 0.45rem rgba(20, 190, 30, 0.5),
+                0.35rem -0.35rem 0.45rem rgba(20, 190, 30, 0.5);
+    transition: all 0.3s ease-in;
+    transform: scale(1.1);
+}
+
+.heroes div{
+    
+    width: fit-content;
+    height: fit-content;
+    margin: 1rem 1rem 0 1rem;
+    box-shadow: 0.2rem -0.2rem 0.6rem rgb(92, 86, 86),
+                0.2rem -0.2rem 0.6rem rgb(105, 101, 101);
+}
+
+.contenedor-heroes{
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 0.2rem;
+    margin: 0.2em;
+    margin-top: 5rem;
+}
+
+.heros-form form{
+    margin-bottom: 50px;
+    outline: none;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+}
+
+.form-group{
+    width: 60%;
+}
+
+.filter{
+    margin-left: 7rem;
+    display: flex;
+}
+.filter input{
+    margin-right: 0.5rem;
+}
+
+
+   /***********************************FIN DE HEROES / INICIO DE TIENDA**********************************/
+
+.contenedor-listas-tienda ul li{
+    margin: 0.5rem;
+}
+
+
+.contenedor-listas-tienda-abuelo{
+    width: 100%;
+    height: 130%;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+}
+
+.contenedor-listas-tienda{
+    margin-top: 3rem;
+    width: 80%;
+    background: linear-gradient(to bottom, rgba(112, 3, 3, 0.5), rgba(0,0,0,0.3));
+}
+
+h1{
+    text-align: center;
+    margin: 2%;
+    margin-top: 1%;
+    font-family: "Radiance", "Noto Sans", sans-serif;
+}
+
+.contenedor-listas{
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 2%;
+    margin: 1%;
+}
+
+.contenedor-listas p{
+    font-size: 20px;
+    margin-bottom: 10%; 
+}
+
+
+.tienda{
+    border: 3px solid white;
+    height: 90vh;
+    width: 90%;
+    background: linear-gradient(to right, rgba(0,0,0,0.5), rgba(0,0,0,0.3));
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    padding: 0.3rem;
+    overflow-y: scroll;
+    flex-flow: wrap;
+    margin-bottom: 5rem;
+}
+
+.contenedor-listas-tienda, .tienda{
+    border-left: 2px solid rgb(219, 219, 219);
+    border-right: 2px solid rgb(219, 219, 219);
+    border-top: 2px solid rgb(219, 219, 219);
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    box-shadow: 0rem 2rem 2rem #00000050;
+}
+
+.logo-nombre{
+    display: flex;
+    width: 40%;
+    align-items: center;
+    padding-left: 0.2rem;
+    height: fit-content;
+}
+
+.stock-precio p, .logo-nombre h3{
+    margin: 0 0 1rem 1rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1.3rem;
+}
+
+.logo{
+    background: url("../img/dota2_logo_mobile.png");
+    background-size: cover;
+    width: 88px;
+    height: 88px;
+}
+
+
+.login{
+    display: none;
+}
+
+.h-btns, .h-btn{
+    width: 60%;
+    display: flex;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.h-btns{
+    justify-content: space-between;
+}
+
+.h-btn{
+    justify-content: center;
+}
+
+
+.heros-form p{
+    font-size: 1em;
+    text-align: center;
+}
+
+.heros-section{
+    display: block;
+}
+
+@media only screen and (min-width: 601px) {
+    
+
+.login{
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem;
+    height: 40%;
+    width: auto;
+    letter-spacing: 0.24rem;
+    border: 2px solid rgb(219, 219, 219);
+    border-radius: 3px;
+    color: aliceblue;
+}
+
+
+.login:hover{
+    border: 3px solid #e47d6e;
+    transform: translateY(-2px);
+    transition: 0.25s all ease;
+}
+
+.menu, .login{
+    display: flex;
+}
+
+.menu{
+    width: 70%;
+    height: 3em;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.border-bot{
+    border-bottom: 3.5px solid #e47d6e;
+}
+
+.atributos{
+    width: 65%;
+}
+
+.registro-on{
+    width: 60%;
+    padding: 1em;
+}
+
+.contenedor-tabla{
+    width: 95%;
+    max-height: 60vh;
+}
+
+.contenedor-tabla table{
+    table-layout: fixed;
+}
+
+#padding-scrollbar{
+    height: auto;
+}
+
+.heros-form p{
+    font-size: 1.5em;
+}
+
+
+.h-btns{
+    width: 30%;
+}
+
+.form-group{
+    width: 29%;
+}
+
+.adjust-form-group{
+    width: 41.18%;
+}
+
+.heros-section{
+    display: flex;
+    justify-content: center;
+}
+
+#add-heros{
+    margin-right: 8rem;
+}
+
+#edit-heros{
+    margin-left: 8rem;
+}
+
+} 
+
+
+@media screen and (min-width: 601px) and (max-width: 990px) {
+
+    .atributos{
+        width: fit-content !important;
+    }
+
+    .heroes{
+        width: 100%;
+    }
+
+    nav .login{
+        display: none;
+    }
+
+    .heros-form p{
+        font-size: 1.3em;
+    }
+
+    .h-btns{
+        width: 30%;
+    }
+
+    .form-group{
+        width: 30%;
+    }
+}
+
+
+/*********************************** FIN DE HEROES / INICIO DE TIENDA **********************************/
+
+.tienda{
+    border: 3px solid white;
+    width: 90%;
+    min-height: 40%;
+    background: linear-gradient(to right, rgba(0,0,0,0.5), rgba(0,0,0,0.3));
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    overflow-y: scroll;
+    flex-flow: wrap;
+}
+
+.logo-nombre h3, .vendidos-precio p{
+    font-family: "messiri_font";
+    margin: 0 0 1rem 1rem;
+}
+
+
+.contenedor-pagina{
+    width: 100%;
+    height: 130%;
+    display: flex;
+    flex-flow: column;
+    align-items: center; 
+}
+
+.contenedor-listas{
+    width: 87%;
+    background: linear-gradient(to bottom, rgba(112, 3, 3, 0.5), rgba(0,0,0,0.3));
+}
+
+.listas{
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    grid-template-rows: auto;
+    grid-template-areas:
+        ". p1 ."
+        ". lista-1 ."
+        ". p2 ."
+        ". lista-2 ."
+        ". p3 ."
+        ". lista-3 .";
+    grid-gap: 20px;
+}
+
+.contenedor-listas ul li{
+    margin: 0.5rem;
+    font-size: 15px;
+    letter-spacing: 0.1rem;
+}
+
+.listas #lista-1,
+.listas #lista-2,
+.listas #lista-3{
+    width: auto;
+    text-align: center;
+}
+.listas #lista-1{
+    grid-area: lista-1;
+}
+.listas #lista-2{
+    grid-area: lista-2;
+}
+.listas #lista-3{
+    grid-area: lista-3;
+}
+
+span p{
+        text-align: center;
+        font-size: 15px;
+}
+
+.listas p{
+    font-size: 1.5rem;
+    letter-spacing: 0.1rem; 
+    color: goldenrod;
+}
+
+.listas #p1,
+.listas #p2,
+.listas #p3{
+    width: auto;
+    text-align: center;
+}
+.listas #p1{
+    grid-area: p1;
+}
+.listas #p2{
+    grid-area: p2;
+}
+.listas #p3{
+    grid-area: p3;
+}
+
+p span{
+    color: goldenrod;
+}
+.contenedor-pagina h1{
+    margin-top: 10%;
+}
+
+.contenedor-listas, .tienda{
+    border-left: 2px solid rgb(219, 219, 219);
+    border-right: 2px solid rgb(219, 219, 219);
+    border-top: 2px solid rgb(219, 219, 219);
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    box-shadow: 0rem 2rem 2rem #00000050;
+}
+
+.articulo{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.3rem;
+    margin-top: 1rem;
+    width: 95%;
+    background: linear-gradient(to right, rgba(0,0,0,0.7), rgba(0,0,0,0.2));
+}
+
+.articulo:hover{
+    border: 3px solid #e47d6e;
+    transform: translateY(-2px);
+    transition: 0.25s all ease;
+}
+
+.logo-nombre{
+    display: flex;
+    width: 70%;
+    align-items: center;
+    padding-left: 0.2rem;
+    height: fit-content;
+}
+
+.articulo img{
+    width: 30%;
+    height: 90%;
+}
+
+/***********************  FIN TIENDA FIN  **********************************/
+
+
+
+/********************* MEDIA QUERY 740px ************************/
+
+@media screen and (min-width: 740px) {
+    
+   /* INICIO INDEX */
+
+    #contenedor_bienvenida{
+        width: 90%;
+    }
+
+    #contenedor_bienvenida{
+        letter-spacing: 0.25rem;
+        font-weight: 600;
+    }
+
+    .info-dota p{
+        max-width: 80%;
+    }
+
+    .info-dota{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* FIN INDEX */ /* INICIO HEROES */
+
+
+    .heroes{
+        width: 85%;
+    }
+
+
+    /* FIN HEROES */ /*INICIO TIENDA */
+
+    .listas{
+        grid-template-areas:
+            "p1 p2 p3"
+            "lista-1 lista-2 lista-3"
+            "lista-1 lista-2 lista-3"
+            "lista-1 lista-2 lista-3";
+        padding: 1.5%;
+        grid-gap: 10px;
+    }
+
+    ul{
+        max-width: 50rem;
+    }
+    
+    .articulo{
+        width: 70%;
+    }
+
+    .tienda{
+        width: 75%;
+    }
+
+    /* FIN TIENDA */ /*INICIO FOOTER*/
+    footer{
+        position: fixed;
+    }
+
+    .logo{
+        background: url("../img/dota2_logo_desktop.png");
+        background-size: cover;
+        min-height: 99px;
+        min-width: 512px;
+    }
+
+
+}
+
+
+
+/********************* MEDIA QUERY 1200px ************************/
+
+@media screen and (min-width: 1200px) {
+
+      /* INICIO INDEX */
+        #contenedor_bienvenida{
+            max-width: 1100px;
+            margin-bottom: -5%;
+        }
+
+        #contenedor_bienvenida p{
+            letter-spacing: 0.5rem;
+        }
+
+        /* FIN INDEX   INICIO HEROES */
+
+        .heroes{
+            width: 75%;
+        }
+
+        /* FIN HEROES  INICIO TIENDA */
+
+        .listas{
+            grid-gap: 20px;
+        }
+
+        .listas p{
+            font-size: 1.7rem;
+        }
+
+        .contenedor-listas {
+            max-width: 1100px;
+        }
+
+        span p{
+            font-size: 1.5em;
+    }
+
+        /* FIN TIENDA*/
+}
